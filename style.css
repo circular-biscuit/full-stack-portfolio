@@ -73,7 +73,7 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
         padding: 1rem;
-        border: thick dotted darkviolet;
+        /* border: thick dotted darkviolet; */
     }
 
     header h1 {
@@ -100,6 +100,11 @@ main {
     padding: 2rem;
 }
 
+        main h2 {
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+
         main .card-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -107,11 +112,20 @@ main {
         }
 
             main .card {
-                border: thin solid var(--bright-text);
+                border-left: thin solid var(--bright-text-dim);
+                border-top: thin solid var(--bright-text-dim);
+                padding: 1rem;
+                box-shadow: 1px 1px 2px var(--bright-text-dim);
             }
 
+                .card img {
+                    width: 100%;
+                    margin-bottom: 0.5rem;
+                }
 
-
+                .card h3 {
+                    margin-bottom: 0.5rem;
+                }
 
 
 
