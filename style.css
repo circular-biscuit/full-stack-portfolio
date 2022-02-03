@@ -1,0 +1,141 @@
+:root {
+    /* dark mode custom color declarations */
+    --dark-background-1: #0d1117;
+    --dark-background-2: #0e1724;
+    --dark-background-2-tl: #0e1724df;
+    --dark-fill: #2f3045;
+    --dark-heading: #1b2e49f8;
+    --light-text: #c9d1d9;
+    --bright-text: #00ffffad;
+    --bright-text-dim: #00ffff75;
+    --dim-background: #dbce7899;
+
+    /* light mode custom color declarations */
+    --light-background-1: #ffffff;
+    --light-background-2: #f3f3f3;
+    --light-background-3: #d4d1cd;
+    --dim-background-dark: #dbce78;
+    --dark-text-1: #212529;
+    --dark-text-2:#4a4a4a;
+    --element-background-1: #6abfc3;
+    --element-background-2: #cc9543;
+    /* html background color */
+    background-color: var(--dark-background-1);
+    
+}
+
+/*-------------GLOBAL------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: monospace;
+    color: var(--light-text);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+span {
+    font-size: 2rem;
+}
+
+/*-------------CONTAINER------------*/
+
+.container {
+    grid-column: 2/3;
+    display:grid;
+    grid-template-rows: 2fr 4fr 2fr;
+    gap: 2ch;
+    height: 100vh;
+    /* max-width: 60%; */
+}
+
+
+
+
+/*-------------HEADER------------*/
+
+header {
+    background-color: var(--dim-background);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+    header .headshot-h {
+        background-image: url('images/headshot-lavender.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        border: thick dotted darkviolet;
+    }
+
+    header h1 {
+        color: var(--dark-text-1);
+        /* position: fixed; */
+
+    }
+
+
+    header .bio{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .bio .about-me {
+            max-width: 15rem;
+        }
+
+/*-------------MAIN------------*/
+
+main {
+    background-color: var(--dark-background-2);
+    padding: 2rem;
+}
+
+        main .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 2rem;
+        }
+
+            main .card {
+                border: thin solid var(--bright-text);
+            }
+
+
+
+
+
+
+
+
+/*-------------FOOTER------------*/
+footer {
+    background-color: var(--bright-text-dim);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+    footer .contact-me {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    footer .headshot-f {
+        background-image: url('images/headshot-lavender.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        /* border: thick dotted darkviolet; */
+        width: 10rem;
+    }
