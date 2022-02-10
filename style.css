@@ -6,6 +6,7 @@
     --dark-background-3:#161b22;
     --dark-fill: #2f3045;
     --dark-heading: #1b2e49f8;
+    --light-heading: #d2a04f;
     --light-text: #c9d1d9;
     --bright-text: #00ffffad;
     --bright-text-dim: #00ffff75;
@@ -27,6 +28,16 @@
 
 /*-------------GLOBAL------------*/
 
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: caslon-regular;
+    color: var(--light-text);
+    border-radius: 4px;
+    text-decoration: none;
+    line-height: 1.6;
+}
 
 body {
     display: grid;
@@ -49,25 +60,25 @@ body {
     src: url('fonts/ACaslonPro-Regular.otf');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-    font-family: caslon-regular;
-    color: var(--light-text);
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-
 span {
     font-size: 1.17rem;
-    transition: color 0.5s;
 }
 
-span:hover {
-    color: var(--element-background-2);
+/* change color for hover over linked icons */
+.highlight:hover {
+    color: var(--light-heading);
 }
+
+/* a:hover {
+    color: var(--light-heading);
+} */
+
+.highlight {
+    transition: color 0.4s;
+}
+
+
+
 /*-------------CONTAINER------------*/
 
 .container {
@@ -116,6 +127,7 @@ main {
                 display: grid;
                 gap: 0.5rem;
                 transition: transform 0.5s, background-color 0.5s;
+                
             }
 
             main .card:hover {
@@ -169,27 +181,28 @@ footer {
 
 /*-------------ASIDE-------------*/
 
-aside {
-    padding: 2rem;
+.bio {
     display: grid;
-    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: var(--dark-background-3);
+    padding: 2rem;
 }
 
-    /* .headshot-h {
-        background-image: url('images/headshot-lavender.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        padding: 1rem;
-    } */
-
-    .bio{
-        display: grid;
-        gap: 0.5rem;
-        /* place-items: center; */
+    .about-me{
         max-width: 15rem;
+        /* max-height: 60vh;
+        overflow: auto; */
     }
 
-       
+    .work-links-bio {
+        display: grid;
+    }
+
+    .languages {
+        display: grid;
+        /* gap: 0.5rem; */
+    }
 
 
 
